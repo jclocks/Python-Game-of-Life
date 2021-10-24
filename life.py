@@ -8,9 +8,9 @@ BLANK = " "
 
 # Edit me to change desired height/width and speed (seconds).
 
-height = 24
-width = 80
-seconds = 0.5
+height = 40
+width = 160
+seconds = 0.25
 
 # Populate grid
 grid = []

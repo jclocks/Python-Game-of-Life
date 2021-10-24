@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
-import random, time, os
+import random, time, os, sys
+
+if "--help" in sys.argv:
+	print("Conway's Game of Life: Terminal Version by jclocks (https://github.com/jclocks/Python-Game-of-Life)\n\nUse: python3 life.py\n\nArguments:\n\t--help: Display this.")
+	sys.exit()
 
 LIVE = "@"
 DEAD = "O"
 BLANK = " "
 
-# Edit me to change desired height/width and speed (seconds).
-
-height = 40
-width = 160
+# TODO: Default to getting the terminal size.
+# Accept arguments to specify the terminal size.
+width = os.get_terminal_size()[0]
+height = os.get_terminal_size()[1]
 seconds = 0.25
 
 # Populate grid
@@ -98,6 +102,5 @@ while True:
 				new_grid[x].append(BLANK)
 
 	# Overwrite grid
-
 	grid = new_grid
 	time.sleep(seconds)

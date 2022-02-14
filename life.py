@@ -9,8 +9,8 @@ DEAD = "O"
 BLANK = " "
 
 # Edit me to change desired height/width, and update rate (seconds).
-height = 24
-width = 80
+height = os.get_terminal_size()[1]
+width = os.get_terminal_size()[0]
 seconds = 0.5
 
 # Populate grid
